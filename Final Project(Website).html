@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> CATHERINE BAYLON WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 
+	 <style>
+	 /* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #FFCAD4;
+}
+::-webkit-scrollbar-thumb {
+    background:#9F8189;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:#FBEEE6;
+}
+/* navbar styling */
+nav{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav.sticky{
+  background:#9F8189;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #FBEEE6;
+}
+nav.sticky .navbar .logo a{
+  color: #fff;
+}
+nav .navbar .menu{
+  display: flex;
+  position: relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #9F8189;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #FBEEE6;
+}
+nav.sticky .menu a{
+  color: #9F8189;
+}
+nav.sticky .menu a:hover{
+  color: #FFE5D8;
+}
+.navbar .media-icons a{
+  color: #FBEEE6;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #9F8189;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #9F8189;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #FFCAD4;
+}
+nav.sticky .menu-btn{
+  color: #9F8189;
+}
+.navbar .menu .menu-btn{
+  color: #9F8189;
+}
+
+/* home section styling */
+.home{
+  height: 100vh;
+  width: 100%;
+  background: url("images/aaa.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home .home-content{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .text-one{
+  font-size: 25px;
+  color: #0E2431;
+}
+.home .text-two{
+  color: #ffc2d1;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .text-three{
+  font-size: 40px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+.home .text-four{
+  font-size: 23px;
+  margin: 5px 0;
+  color: #0E2431;
+}
+.home .button{
+  margin: 14px 0;
+}
+.home .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #FFCAD4;
+  color: #9F8189;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.home .button button:hover{
+  border-color: #FFCAD4;
+  background-color: #fff;
+  color: #FFCAD4;
+}
+
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+section{
+  padding-top: 40px;
+    background-color:#F3ABB6;
+}
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span{
+  color: #FFE5D8;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background:#FBEEE6;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left{
+  width: 45%;
+}
+.about .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right{
+  width: 55%;
+}
+section  .topic{
+  color: #0E2431;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p{
+  text-align: justify;
+  color: #0E2431;
+}
+section .button{
+  margin: 16px 0;
+}
+section .button button{
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: #FFCAD4;
+  color: #9F8189;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+section .button button:hover{
+  border-color: #FFCAD4;
+  background-color: #fff;
+  color: #FFCAD4;
+}
+
+ /* My Skills CSS */
+ .skills{
+   background: #FFB3C6;
+ }
+ .skills .content{
+   padding: 40px 0;
+ }
+ .skills .skills-details{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .skills-details .text{
+   width: 50%;
+ }
+ .skills-details p{
+   color: #0E2431;
+   text-align: justify;
+ }
+.skills .skills-details .experience{
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num{
+  color: #FFC2D1;
+  font-size: 80px;
+}
+.skills-details .experience .exp{
+  color: #FFC2D1;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box{
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic{
+  font-size: 20px;
+  color:  #FBEEE6;
+}
+.skills-details .boxes .per{
+  font-size: 60px;
+  color: #FBEEE6;
+}
+
+/* My Services CSS */
+.services .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover{
+  background: #FBEEE6;
+  color: #fff;
+}
+.services .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #FBEEE6;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #fff;
+  color: #FFCAD4;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #fff;
+}
+/* Contact Me CSS */
+.contact{
+  background: #FFB3C6;
+}
+.contact .content{
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .text{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+/* Footer CSS */
+footer{
+  background: #FFCAD4;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background:  #FBEEE6;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #FBEEE6;
+    height: 100vh;
+    max-width: 400px;
+    width: 50%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #FFC5BF;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color:#FBEEE6;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+	color: #;FFC5BF
+  }
+  .home .text-two{
+    font-size: 65px;
+  }
+  .home .text-three{
+    font-size: 35px;
+  }
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+}
+}
+
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #FFCAD4;
+  }
+}
+
+</style>
+	 
+	 
+	 
+	 
+	 
+   </head>
+   
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Personal Website Blog</a></div>
+      <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://www.facebook.com/profile.php?id=100007705755188"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+<!-- Home Section Start -->
+ <section class="home" id="home">
+   <div class="home-content">
+     <div class="text">
+
+<div class="right">
+      <img align="right" src="catherine.jpg" alt="about me" width="700" height="500" >
+    </div>
+
+
+       <div class="text-one">Hi! My Name is</div>
+       <div class="text-two">Catherine Baylon</div>
+       <div class="text-three">BSIT STUDENT</div>
+       <div class="text-four">From General Trias Cavite Philippines</div>
+     </div>
+   </div>
+ </section>
+
+<!-- About Section Start -->
+<section class="about" id="about">
+  <div class="content">
+    <div class="title"><span>About me</span></div>
+  <div class="about-details">
+    <div class="left">
+      <img src="cathy.jpg" alt="about me">
+    </div>
+    <div class="right">
+      <div class="topic">This is me</div>
+      <p>I'm Catherine Baylon from General Trias Cavite, and I'm presently enrolled at Cavite State University's General Trias Campus, where I'm pursuing a Bachelor's degree in Information Technology. Aside from studying, I work as a service crew member at KFC Imus. In terms of my growing leadership, I am also a Sk Kagawad or Sanguiang Kabataan of the Barangay through what I do in life today. In this pandemic, I only have one request: may everyone avoid at this time. May we all be granted full thickness. Thank you incredibly much!</p>
+      
+    </div>
+  </div>
+  </div>
+		<br>
+</section>
+
+<section class="about" id="about">
+  <div class="content">
+  <div class="about-details">
+    
+    <div class="right">
+      <div class="topic">16 January 2022</div>
+      <p>Today what I have learned in life is that not everyone who talks, hurts and is told about the problem is a true friend who considers you. Some of them are waiting for you to make mistakes and break up with other people. The person interacts only because there is a need or benefit to it. Maybe the real people in this world are limited.</p>
+      
+    </div>
+  </div>
+  </div>
+    <br>
+</section>
+
+<section class="about" id="about">
+  <div class="content">
+  <div class="about-details">
+    
+    <div class="right">
+      <div class="topic">17 January 2022</div>
+      <p>What I learned today is that maybe not everyone deserves your energy. In other words, you choose the people you will be with, you will talk about personally and lastly the person you will trust. A true friend is not measured by quantity, even if it's one or two, if it's real, you won't leave no matter what happens.</p>
+      
+    </div>
+  </div>
+  </div>
+    <br>
+</section>
+
+<section class="about" id="about">
+  <div class="content">
+  <div class="about-details">
+    
+    <div class="right">
+      <div class="topic">18 January 2022</div>
+      <p>Now what I have learned is about family. They are the ones who will not leave you no matter what happens, whether you are at fault, whether you make a mistake or even if you get hurt or hurt. The hardships and sacrifices of a parent can't be matched anymore, it's like I was suddenly scared that one day I'll be the one to make a family and then I won't be able to do it, you know that? But the best is still really with the family no matter what.</p>
+      
+    </div>
+  </div>
+  </div>
+    <br>
+</section>
+
+<!-- My Skill Section Start -->
+<!-- Section Tag and Other Div will same where we need to put same CSS -->
+<section class="skills" id="skills"  style="background-color:#9F8189 ">
+ <div class="content">
+   <div class="title"><span>Skills</span></div>
+   <div class="skills-details">
+     <div class="text">
+       <div class="topic">Skills</div>
+	   <p>Computer Skills - Proficient with Microsoft Word, Excel, PowerPoint and HTML coding. </p>
+	   <p>Problem-solving Skills - Resolve and execute strategies and think outside of the box.</p>
+       <p>Communication Skills - Confident, articulate, and professional speaking abilities, speaking in public, to groups, or via electronic media (and experience) </p>
+	   <p>Active Listener Skills - make sure to let others know that they have been heard, and encourage them to share their thoughts and feelings fully.</p>	
+	 </div>
+     <div class="boxes">
+       <div class="box">
+         <div class="topic">Computer Skill</div>
+         <div class="per">80%</div>
+       </div>
+       <div class="box">
+         <div class="topic">Problem-solving</div>
+         <div class="per">80%</div>
+       </div>
+       <div class="box">
+         <div class="topic">Communication skill</div>
+         <div class="per">95%</div>
+       </div>
+       <div class="box">
+         <div class="topic">Active Listening</div>
+         <div class="per">95%</div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <br>
+</section>
+
+<!-- My Services Section Start -->
+ <section class="services" id="services">
+   <div class="content">
+     <div class="title"><span>Projects</span></div>
+     <div class="boxes">
+       <div class="box">
+         <div class="icon">
+           <i class="fas fa-file"></i>
+       </div>
+       <div class="topic">Capstone Thesis</div>
+       <p>An Intelligent CareTech Mobile Health System for a person with depression</p>
+     </div>
+       <div class="box">
+         <div class="icon">
+           <i class="fas fa-hospital"></i>
+       </div>
+       <div class="topic">Project 1</div>
+       <p>Hospital Management System using Visual Basic</p>
+     </div>
+       <div class="box">
+         <div class="icon">
+           <i class="fas fa-desktop"></i>
+       </div>
+       <div class="topic">Project 2</div>
+       <p>Cavite State University-General Trias City Campus Personal Website Blog using HTML and CSS</p>
+     </div>
+   </div>
+   </div>
+   <br>
+ </section>
+
+<!-- Contact Me section Start -->
+<section class="contact" id="contact" style="background-color:#9F8189">
+  <div class="content">
+    <div class="title"><span>Contact</span></div>
+    <div class="text">
+      <div class="topic">Contact me here!</div>
+      <p>catherinebaylon487@gmail.com</p>
+	  <br>
+	  <p>0977-125-4540</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section Start -->
+<footer style="background-color:#F3ABB6">
+  <div class="text">
+    <span> &#169; 2022 All Rights Reserved</span>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
